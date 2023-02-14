@@ -27,20 +27,20 @@ import ErrorPage from './pages/Error';
 import EventDetailPage from './pages/EventDetail';
 import EventsPage from './pages/Events';
 import HomePage from './pages/Home';
-import Layout from './pages/Layout';
+import RootLayout from './pages/Root';
 import NewEventPage from './pages/NewEvent';
 
 const router = createBrowserRouter([
   {
     path: '/',
-    element: <Layout />,
+    element: <RootLayout />,
     errorElement: <ErrorPage />,
     children: [
       { index: true, element: <HomePage /> },
-      { path: '/events', element: <EventsPage /> },
-      { path: '/events/:eventId', element: <EventDetailPage /> },
-      { path: '/events/:eventId/edit', element: <EditEventPage /> },
-      { path: '/events/new', element: <NewEventPage /> },
+      { path: 'events', element: <EventsPage /> },
+      { path: 'events/:eventId', element: <EventDetailPage /> },
+      { path: 'events/:eventId/edit', element: <EditEventPage /> },
+      { path: 'events/new', element: <NewEventPage /> },
     ]
   }
 ]);
