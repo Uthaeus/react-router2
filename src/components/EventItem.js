@@ -12,6 +12,7 @@ function EventItem({ event }) {
       submit(null, {method: 'delete'})
     }
   }
+  console.log('in event item', event)
 
   return (
     <article className={classes.event}>

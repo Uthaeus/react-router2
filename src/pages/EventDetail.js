@@ -35,7 +35,8 @@ const loadEvent = async (id) => {
         return json({message: 'Could not fetch events'}, {status: 500});
     } else {
         const resData = await response.json();
-        return resData.events;
+        console.log('loadEvent, eventDetail', resData.events[0]);
+        return resData.events[0];
     }
 }
 
